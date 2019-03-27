@@ -4,7 +4,7 @@
                 type="Magento\Framework\Api\SearchResults" />
     <preference for="Esgi\Beer\Api\Data\BreweryInterface" type="Esgi\Beer\Model\Brewery" />
     <preference for="Esgi\Beer\Api\BreweryRepositoryInterface" type="Esgi\Beer\Model\BreweryRepository" />
-    <!-- Create our type DepartmentGridDataProvider -->
+    <!-- Create our type BreweryGridDataProvider -->
     <virtualType name="BreweryGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
         <arguments>
             <argument name="collection" xsi:type="object" shared="false">Esgi\Beer\Model\ResourceModel\Brewery\Collection</argument>

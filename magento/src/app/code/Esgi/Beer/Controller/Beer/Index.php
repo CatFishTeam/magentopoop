@@ -1,6 +1,6 @@
 <?php
 // app/code/Esgi/Beer/Controller/Brewery/Index.php
-namespace Esgi\Beer\Controller\Brewery;
+namespace Esgi\Beer\Controller\Beer;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
@@ -33,7 +33,7 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         /** @var \Magento\Framework\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->set(__('Beer Brewery Index'));
+        $resultPage->getConfig()->getTitle()->set(__('Beer Beer Index'));
         return $resultPage;
     }
 }
