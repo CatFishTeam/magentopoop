@@ -35,7 +35,7 @@ class Index extends Action
     {
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Esgi_Job::department');
+        $resultPage->setActiveMenu(self::ADMIN_RESOURCE);
         $resultPage->addBreadcrumb(__('Jobs'), __('Departments'));
         $resultPage->addBreadcrumb(__('Manage Departments'), __('Manage Departments'));
         $resultPage->getConfig()->getTitle()->prepend(__('Department'));

@@ -11,6 +11,7 @@ namespace Esgi\Job\Model;
 use Esgi\Job\Api\DepartmentRepositoryInterface;
 use Esgi\Job\Api\Data;
 use Esgi\Job\Model\ResourceModel\Department as DepartmentResource;
+use Esgi\Job\Model\DepartmentFactory;
 use Esgi\Job\Model\ResourceModel\Department\CollectionFactory as DepartmentCollectionFactory;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;

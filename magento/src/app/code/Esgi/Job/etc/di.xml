@@ -4,7 +4,6 @@
                 type="Magento\Framework\Api\SearchResults" />
     <preference for="Esgi\Job\Api\Data\DepartmentInterface" type="Esgi\Job\Model\Department" />
     <preference for="Esgi\Job\Api\DepartmentRepositoryInterface" type="Esgi\Job\Model\DepartmentRepository" />
-
     <!-- Create our type DepartmentGridDataProvider -->
     <virtualType name="DepartmentGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
         <arguments>
@@ -22,7 +21,6 @@
             </argument>
         </arguments>
     </virtualType>
-
     <!-- Type for job_department_listing_data_source -->
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
