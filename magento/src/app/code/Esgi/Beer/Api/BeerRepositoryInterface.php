@@ -29,7 +29,7 @@ interface BeerRepositoryInterface
     public function getById($beerId);
 
     /**
-     * Retrieve breweries matching the specified criteria.
+     * Retrieve beerr matching the specified criteria.
      *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @return \Esgi\Beer\Api\Data\BeerSearchResultsInterface

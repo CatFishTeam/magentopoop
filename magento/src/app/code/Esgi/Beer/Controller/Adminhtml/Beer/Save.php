@@ -41,9 +41,9 @@ class Save extends \Esgi\Beer\Controller\Adminhtml\Beer
      * @param Context                       $context
      * @param \Magento\Framework\Registry   $coreRegistry
      * @param DataPersistorInterface        $dataPersistor
-     * @param BeerRepositoryInterface    $beerRepository
-     * @param BeerFactory                $beerFactory
-     * @param BeerResourceModel       $beerResourceModel
+     * @param BeerRepositoryInterface       $beerRepository
+     * @param BeerFactory                   $beerFactory
+     * @param BeerResourceModel             $beerResourceModel
      */
     public function __construct(
         Context $context,
@@ -55,7 +55,7 @@ class Save extends \Esgi\Beer\Controller\Adminhtml\Beer
     ) {
         parent::__construct($context, $coreRegistry);
 
-        $this->dataPersistor        = $dataPersistor;
+        $this->dataPersistor     = $dataPersistor;
         $this->beerRepository    = $beerRepository;
         $this->beerFactory       = $beerFactory;
         $this->beerResourceModel = $beerResourceModel;
