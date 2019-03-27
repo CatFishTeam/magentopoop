@@ -1,7 +1,7 @@
 <?php
-namespace Esgi\Job\Controller\Adminhtml\Brewery;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
-class Delete extends \Esgi\Job\Controller\Adminhtml\Brewery
+class Delete extends \Esgi\Beer\Controller\Adminhtml\Brewery
 {
     /**
      * Delete action

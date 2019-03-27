@@ -3,10 +3,10 @@
 namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
 use Magento\Backend\App\Action\Context;
-use Esgi\Job\Model\Department;
-use Esgi\Job\Model\BreweryFactory;
-use Esgi\Job\Model\ResourceModel\Department as DepartmentResourceModel;
-use Esgi\Job\Api\DepartmentRepositoryInterface;
+use Esgi\Beer\Model\Brewery;
+use Esgi\Beer\Model\BreweryFactory;
+use Esgi\Beer\Model\ResourceModel\Brewery as BreweryResourceModel;
+use Esgi\Beer\Api\BreweryRepositoryInterface;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Exception\LocalizedException;
 
@@ -23,7 +23,7 @@ class Save extends \Esgi\Beer\Controller\Adminhtml\Brewery
      */
     protected $breweryRepository;
     /**
-     * Description $departmentFactory field
+     * Description $breweryFactory field
      *
      * @var BreweryFactory $breweryFactory
      */
@@ -49,7 +49,7 @@ class Save extends \Esgi\Beer\Controller\Adminhtml\Brewery
         Context $context,
         \Magento\Framework\Registry $coreRegistry,
         DataPersistorInterface $dataPersistor,
-        DepartmentRepositoryInterface $breweryRepository,
+        BreweryRepositoryInterface $breweryRepository,
         BreweryFactory $breweryFactory,
         BreweryResourceModel $breweryResourceModel
     ) {
@@ -103,7 +103,7 @@ class Save extends \Esgi\Beer\Controller\Adminhtml\Brewery
             } catch (LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\Exception $e) {
-                $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the department.'));
+                $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the brewery.'));
             }
 
             $this->dataPersistor->set('beer_brewery', $data);

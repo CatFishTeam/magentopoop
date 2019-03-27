@@ -24,7 +24,7 @@ class Edit extends \Esgi\Beer\Controller\Adminhtml\Brewery
     }
 
     /**
-     * Edit Job department
+     * Edit Beer brewery
      *
      * @return \Magento\Framework\Controller\ResultInterface
      * @SuppressWarnings(PHPMD.NPathComplexity)
@@ -38,7 +38,7 @@ class Edit extends \Esgi\Beer\Controller\Adminhtml\Brewery
         if ($id) {
             $model->load($id);
             if (!$model->getId()) {
-                $this->messageManager->addError(__('This department no longer exists.'));
+                $this->messageManager->addError(__('This brewery no longer exists.'));
                 /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
                 $resultRedirect = $this->resultRedirectFactory->create();
 
@@ -46,7 +46,7 @@ class Edit extends \Esgi\Beer\Controller\Adminhtml\Brewery
             }
         }
 
-        $this->_coreRegistry->register('job_department', $model);
+        $this->_coreRegistry->register('beer_brewery', $model);
 
         // 5. Build edit form
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */

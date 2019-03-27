@@ -1,10 +1,10 @@
 <?php
-namespace Esgi\Job\Controller\Adminhtml\Department;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use Esgi\Job\Model\ResourceModel\Department\CollectionFactory;
+use Esgi\Beer\Model\ResourceModel\Brewery\CollectionFactory;
 
 /**
  * Class MassDelete

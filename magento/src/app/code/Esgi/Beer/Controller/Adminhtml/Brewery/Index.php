@@ -1,5 +1,5 @@
 <?php
-namespace Esgi\Job\Controller\Adminhtml\Department;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
