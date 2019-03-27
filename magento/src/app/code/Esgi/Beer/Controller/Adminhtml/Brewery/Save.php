@@ -1,39 +1,39 @@
 <?php
 
-namespace Esgi\Job\Controller\Adminhtml\Department;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
 use Magento\Backend\App\Action\Context;
 use Esgi\Job\Model\Department;
-use Esgi\Job\Model\DepartmentFactory;
+use Esgi\Job\Model\BreweryFactory;
 use Esgi\Job\Model\ResourceModel\Department as DepartmentResourceModel;
 use Esgi\Job\Api\DepartmentRepositoryInterface;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Exception\LocalizedException;
 
-class Save extends \Esgi\Job\Controller\Adminhtml\Brewery
+class Save extends \Esgi\Beer\Controller\Adminhtml\Brewery
 {
     /**
      * @var DataPersistorInterface
      */
     protected $dataPersistor;
     /**
-     * Description $departmentRepository field
+     * Description $breweryRepository field
      *
-     * @var DepartmentRepositoryInterface $departmentRepository
+     * @var BreweryRepositoryInterface $breweryRepository
      */
-    protected $departmentRepository;
+    protected $breweryRepository;
     /**
      * Description $departmentFactory field
      *
-     * @var DepartmentFactory $departmentFactory
+     * @var BreweryFactory $breweryFactory
      */
-    protected $departmentFactory;
+    protected $breweryFactory;
     /**
-     * Description $departmentResourceModel field
+     * Description $breweryResourceModel field
      *
-     * @var DepartmentResourceModel $departmentResourceModel
+     * @var BreweryResourceModel $breweryResourceModel
      */
-    protected $departmentResourceModel;
+    protected $breweryResourceModel;
 
     /**
      * Save constructor
@@ -41,24 +41,24 @@ class Save extends \Esgi\Job\Controller\Adminhtml\Brewery
      * @param Context                       $context
      * @param \Magento\Framework\Registry   $coreRegistry
      * @param DataPersistorInterface        $dataPersistor
-     * @param DepartmentRepositoryInterface $departmentRepository
-     * @param DepartmentFactory             $departmentFactory
-     * @param DepartmentResourceModel       $departmentResourceModel
+     * @param BreweryRepositoryInterface    $breweryRepository
+     * @param BreweryFactory                $breweryFactory
+     * @param BreweryResourceModel       $breweryResourceModel
      */
     public function __construct(
         Context $context,
         \Magento\Framework\Registry $coreRegistry,
         DataPersistorInterface $dataPersistor,
-        DepartmentRepositoryInterface $departmentRepository,
-        DepartmentFactory $departmentFactory,
-        DepartmentResourceModel $departmentResourceModel
+        DepartmentRepositoryInterface $breweryRepository,
+        BreweryFactory $breweryFactory,
+        BreweryResourceModel $breweryResourceModel
     ) {
         parent::__construct($context, $coreRegistry);
 
-        $this->dataPersistor           = $dataPersistor;
-        $this->departmentRepository    = $departmentRepository;
-        $this->departmentFactory       = $departmentFactory;
-        $this->departmentResourceModel = $departmentResourceModel;
+        $this->dataPersistor        = $dataPersistor;
+        $this->breweryRepository    = $breweryRepository;
+        $this->breweryFactory       = $breweryFactory;
+        $this->breweryResourceModel = $breweryResourceModel;
     }
 
     /**
@@ -77,15 +77,15 @@ class Save extends \Esgi\Job\Controller\Adminhtml\Brewery
                 $data['entity_id'] = null;
             }
 
-            /** @var Department $model */
-            $model = $this->departmentFactory->create();
+            /** @var Brewery $model */
+            $model = $this->breweryFactory->create();
 
             $id = $this->getRequest()->getParam('entity_id');
             if ($id) {
                 try {
-                    $model = $this->departmentRepository->getById($id);
+                    $model = $this->breweryRepository->getById($id);
                 } catch (LocalizedException $e) {
-                    $this->messageManager->addErrorMessage(__('This department no longer exists.'));
+                    $this->messageManager->addErrorMessage(__('This brewery no longer exists.'));
 
                     return $resultRedirect->setPath('*/*/');
                 }
@@ -94,7 +94,7 @@ class Save extends \Esgi\Job\Controller\Adminhtml\Brewery
             $model->setData($data);
 
             try {
-                $this->departmentRepository->save($model);
+                $this->breweryRepository->save($model);
                 if ($this->getRequest()->getParam('back')) {
                     return $resultRedirect->setPath('*/*/edit', ['id' => $model->getId()]);
                 }
@@ -106,7 +106,7 @@ class Save extends \Esgi\Job\Controller\Adminhtml\Brewery
                 $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the department.'));
             }
 
-            $this->dataPersistor->set('job_department', $data);
+            $this->dataPersistor->set('beer_brewery', $data);
 
             return $resultRedirect->setPath('*/*/edit', ['entity_id' => $id]);
         }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Esgi\Job\Controller\Adminhtml\Department;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
-class Edit extends \Esgi\Job\Controller\Adminhtml\Brewery
+class Edit extends \Esgi\Beer\Controller\Adminhtml\Brewery
 {
     /**
      * @var \Magento\Framework\View\Result\PageFactory
@@ -33,7 +33,7 @@ class Edit extends \Esgi\Job\Controller\Adminhtml\Brewery
     {
         // 1. Get ID and create model
         $id    = $this->getRequest()->getParam('id');
-        $model = $this->_objectManager->create(\Esgi\Job\Model\Department::class);
+        $model = $this->_objectManager->create(\Esgi\Beer\Model\Brewery::class);
         // 2. Initial checking
         if ($id) {
             $model->load($id);
@@ -52,11 +52,11 @@ class Edit extends \Esgi\Job\Controller\Adminhtml\Brewery
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $this->initPage($resultPage)->addBreadcrumb(
-            $id ? __('Edit Department') : __('New Department'),
-            $id ? __('Edit Department') : __('New Department')
+            $id ? __('Edit Brewery') : __('New Brewery'),
+            $id ? __('Edit Brewery') : __('New Brewery')
         );
-        $resultPage->getConfig()->getTitle()->prepend(__('Departments'));
-        $resultPage->getConfig()->getTitle()->prepend($model->getId() ? $model->getName() : __('New Department'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Breweries'));
+        $resultPage->getConfig()->getTitle()->prepend($model->getId() ? $model->getName() : __('New Brewery'));
 
         return $resultPage;
     }

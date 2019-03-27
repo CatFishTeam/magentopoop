@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- app/code/Esgi/Beer/etc/adminhtml/menu.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Esgi_Beer::beer_head" title="Beer" module="Esgi_Beer" sortOrder="100" resource="Esgi_Beer::job_head" />
+        <add id="Esgi_Beer::brewery" title="Breweries" module="Esgi_Beer" sortOrder="10" parent="Esgi_Beer::job_head" action="beer/brewery" resource="Esgi_Beer::brewery" />
+        <add id="Esgi_Beer::beer" title="Beers" module="Esgi_Beer" sortOrder="20" parent="Esgi_Beer::beer_head" action="beer/beer" resource="Esgi_Beer::beer" />
+    </menu>
+</config>
