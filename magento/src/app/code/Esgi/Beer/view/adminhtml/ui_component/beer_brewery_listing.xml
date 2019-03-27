@@ -16,7 +16,7 @@
                 <item name="name" xsi:type="string">add</item>
                 <item name="label" xsi:type="string" translate="true">Add New Brewery</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/new</item> <!-- magento will translate it by job/department/new -->
+                <item name="url" xsi:type="string">*/*/new</item> <!-- magento will translate it by Beer/brewery/new -->
             </item>
         </item>
     </argument>
@@ -73,7 +73,7 @@
         </massaction>
         <paging name="listing_paging"/>
     </listingToolbar>
-    <columns name="job_department_columns">
+    <columns name="Beer_brewery_columns">
 
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">

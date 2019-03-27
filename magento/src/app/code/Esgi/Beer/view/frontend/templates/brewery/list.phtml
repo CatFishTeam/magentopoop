@@ -1,10 +1,10 @@
 <?php
 /** @var $block Esgi\Beer\Block\Brewery */
-$departments = $block->getDepartments();
+$breweries = $block->getBreweries();
 ?>
-<ul id="department-list">
-    <?php foreach ($departments as $department) : ?>
-        <li><?php echo $department->getTitle(); ?></li>
+<ul id="brewery-list">
+    <?php foreach ($breweries as $brewery) : ?>
+        <li><?php echo $brewery->getTitle(); ?></li>
     <?php endforeach; ?>
 </ul>
 <field name="brewery_id" formElement="select" sortOrder="10">

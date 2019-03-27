@@ -13,14 +13,14 @@ use Magento\Framework\Api\SearchResultsInterface;
 interface BrewerySearchResultsInterface extends SearchResultsInterface
 {
     /**
-     * Get departments list.
+     * Get breweries list.
      *
      * @return \Esgi\Beer\Api\Data\BreweryInterface[]
      */
     public function getItems();
 
     /**
-     * Set departments list.
+     * Set breweries list.
      *
      * @param \Esgi\Beer\Api\Data\BreweryInterface[] $items
      * @return $this

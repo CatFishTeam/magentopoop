@@ -22,29 +22,29 @@ class GenericButton
     /**
      * @var BreweryRepositoryInterface
      */
-    protected $departmentRepository;
+    protected $breweryRepository;
 
     /**
      * @param Context $context
-     * @param BreweryRepositoryInterface $departmentRepository
+     * @param BreweryRepositoryInterface $breweryRepository
      */
     public function __construct(
         Context $context,
-        BreweryRepositoryInterface $departmentRepository
+        BreweryRepositoryInterface $breweryRepository
     ) {
         $this->context              = $context;
-        $this->departmentRepository = $departmentRepository;
+        $this->breweryRepository = $breweryRepository;
     }
 
     /**
-     * Return Beer department ID
+     * Return Beer brewery ID
      *
      * @return int|null
      */
     public function getDepartmentId()
     {
         try {
-            return $this->departmentRepository->getById(
+            return $this->breweryRepository->getById(
                 $this->context->getRequest()->getParam('id')
             )->getId();
         } catch (NoSuchEntityException $e) {
