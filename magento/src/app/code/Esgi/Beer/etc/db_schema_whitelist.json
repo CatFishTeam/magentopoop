@@ -1,0 +1,38 @@
+{
+  "esgi_beer_brewery": {
+    "column": {
+      "entity_id": true,
+      "title": true,
+      "content": true,
+      "creation_time": true,
+      "update_time": true,
+      "is_active": true
+    },
+    "index": {
+      "ESGI_BREWERY_TITLE_CONTENT": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  },
+  "esgi_beer_beer": {
+    "column": {
+      "entity_id": true,
+      "title": true,
+      "type": true,
+      "location": true,
+      "content": true,
+      "creation_time": true,
+      "update_time": true,
+      "is_active": true,
+      "brewery_id": true
+    },
+    "index": {
+      "ESGI_BEER_TITLE_CONTENT": true
+    },
+    "constraint": {
+      "PRIMARY": true,
+      "ESGI_BEER_BEER_BREWERY_ID_ESGI_BEER_BREWERY_ENTITY_ID": true
+    }
+  }
+}
