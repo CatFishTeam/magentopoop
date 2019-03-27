@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Esgi\Beer\Api;
 
 /**
- * Esgi job CRUD interface.
+ * Esgi beer CRUD interface.
  * @api
  */
 interface BreweryRepositoryInterface
@@ -13,23 +13,23 @@ interface BreweryRepositoryInterface
     /**
      * Save block.
      *
-     * @param \Esgi\Beer\Api\Data\BreweryInterface $department
+     * @param \Esgi\Beer\Api\Data\BreweryInterface $brewery
      * @return \Esgi\Beer\Api\Data\BreweryInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function save(Data\BreweryInterface $department);
+    public function save(Data\BreweryInterface $brewery);
 
     /**
-     * Retrieve $department.
+     * Retrieve $brewery.
      *
-     * @param int $departmentId
+     * @param int $breweryId
      * @return \Esgi\Beer\Api\Data\BreweryInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function getById($departmentId);
+    public function getById($breweryId);
 
     /**
-     * Retrieve departments matching the specified criteria.
+     * Retrieve breweries matching the specified criteria.
      *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @return \Esgi\Beer\Api\Data\BrewerySearchResultsInterface
@@ -38,21 +38,21 @@ interface BreweryRepositoryInterface
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
 
     /**
-     * Delete department.
+     * Delete brewery.
      *
-     * @param \Esgi\Beer\Api\Data\BreweryInterface $department
+     * @param \Esgi\Beer\Api\Data\BreweryInterface $brewery
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function delete(Data\BreweryInterface $department);
+    public function delete(Data\BreweryInterface $brewery);
 
     /**
-     * Delete department by ID.
+     * Delete brewery by ID.
      *
-     * @param int $departmentId
+     * @param int $breweryId
      * @return bool true on success
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function deleteById($departmentId);
+    public function deleteById($breweryId);
 }

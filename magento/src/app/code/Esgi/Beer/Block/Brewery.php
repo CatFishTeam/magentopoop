@@ -1,5 +1,5 @@
 <?php
-// app/code/Esgi/Job/Block/Department.php
+// app/code/Esgi/Beer/Block/Brewery.php
 namespace Esgi\Beer\Block;
 
 use Magento\Framework\View\Element\Template;
@@ -23,7 +23,7 @@ class Brewery extends Template
         parent::__construct($context, $data);
     }
 
-    public function getDepartments()
+    public function getBreweries()
     {
         /** @var Collection $collection */
         $collection = $this->collectionFactory->create();
