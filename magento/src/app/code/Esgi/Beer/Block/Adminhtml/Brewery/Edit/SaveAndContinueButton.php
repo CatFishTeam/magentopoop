@@ -1,5 +1,5 @@
 <?php
-namespace Esgi\Beer\Block\Adminhtml\Department\Edit;
+namespace Esgi\Beer\Block\Adminhtml\Brewery\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 

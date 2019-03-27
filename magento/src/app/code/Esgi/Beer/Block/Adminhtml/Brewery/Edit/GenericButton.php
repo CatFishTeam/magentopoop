@@ -3,7 +3,7 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-namespace Esgi\Beer\Block\Adminhtml\Department\Edit;
+namespace Esgi\Beer\Block\Adminhtml\Brewery\Edit;
 
 use Magento\Backend\Block\Widget\Context;
 use Esgi\Beer\Api\BreweryRepositoryInterface;
