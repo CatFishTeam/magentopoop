@@ -2,7 +2,7 @@
 
 namespace Esgi\Job\Controller\Adminhtml\Department;
 
-class Edit extends \Esgi\Job\Controller\Adminhtml\Department
+class Edit extends \Esgi\Job\Controller\Adminhtml\Brewery
 {
     /**
      * @var \Magento\Framework\View\Result\PageFactory

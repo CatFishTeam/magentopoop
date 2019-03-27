@@ -39,7 +39,7 @@ abstract class Brewery extends \Magento\Backend\App\Action
      */
     protected function initPage($resultPage)
     {
-        $resultPage->setActiveMenu('Esgi_Beer::brewery')->addBreadcrumb(__('Job'), __('Brewery'))->addBreadcrumb(
+        $resultPage->setActiveMenu('Esgi_Beer::brewery')->addBreadcrumb(__('Beer'), __('Brewery'))->addBreadcrumb(
             __('Breweries'),
             __('Breweries')
         );

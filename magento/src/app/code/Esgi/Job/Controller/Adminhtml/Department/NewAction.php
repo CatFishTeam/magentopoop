@@ -2,7 +2,7 @@
 
 namespace Esgi\Job\Controller\Adminhtml\Department;
 
-class NewAction extends \Esgi\Job\Controller\Adminhtml\Department
+class NewAction extends \Esgi\Job\Controller\Adminhtml\Brewery
 {
     /**
      * @var \Magento\Backend\Model\View\Result\Forward

@@ -1,8 +1,8 @@
 <?php
 
-namespace Esgi\Job\Controller\Adminhtml\Department;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
-class NewAction extends \Esgi\Job\Controller\Adminhtml\Department
+class NewAction extends \Esgi\Beer\Controller\Adminhtml\Brewery
 {
     /**
      * @var \Magento\Backend\Model\View\Result\Forward

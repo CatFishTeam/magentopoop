@@ -1,5 +1,5 @@
 <?php
-namespace Esgi\Job\Controller\Adminhtml\Department;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
@@ -7,7 +7,7 @@ use Magento\Backend\App\Action;
 
 class Index extends Action
 {
-    const ADMIN_RESOURCE = 'Esgi_Job::department';
+    const ADMIN_RESOURCE = 'Esgi_Beer::brewery';
 
     /**
      * @var PageFactory
@@ -36,9 +36,9 @@ class Index extends Action
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu(self::ADMIN_RESOURCE);
-        $resultPage->addBreadcrumb(__('Jobs'), __('Departments'));
-        $resultPage->addBreadcrumb(__('Manage Departments'), __('Manage Departments'));
-        $resultPage->getConfig()->getTitle()->prepend(__('Department'));
+        $resultPage->addBreadcrumb(__('Beers'), __('Breweries'));
+        $resultPage->addBreadcrumb(__('Manage Breweries'), __('Manage Breweries'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Brewery'));
 
         return $resultPage;
     }

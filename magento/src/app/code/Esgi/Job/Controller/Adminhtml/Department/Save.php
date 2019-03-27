@@ -10,7 +10,7 @@ use Esgi\Job\Api\DepartmentRepositoryInterface;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Exception\LocalizedException;
 
-class Save extends \Esgi\Job\Controller\Adminhtml\Department
+class Save extends \Esgi\Job\Controller\Adminhtml\Brewery
 {
     /**
      * @var DataPersistorInterface

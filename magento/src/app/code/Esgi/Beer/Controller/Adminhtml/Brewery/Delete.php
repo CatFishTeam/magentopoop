@@ -1,7 +1,7 @@
 <?php
-namespace Esgi\Job\Controller\Adminhtml\Department;
+namespace Esgi\Beer\Controller\Adminhtml\Brewery;
 
-class Delete extends \Esgi\Job\Controller\Adminhtml\Department
+class Delete extends \Esgi\Beer\Controller\Adminhtml\Brewery
 {
     /**
      * Delete action
@@ -17,11 +17,11 @@ class Delete extends \Esgi\Job\Controller\Adminhtml\Department
         if ($id) {
             try {
                 // init model and delete
-                $model = $this->_objectManager->create(\Esgi\Job\Model\Department::class);
+                $model = $this->_objectManager->create(\Esgi\Beer\Model\Brewery::class);
                 $model->load($id);
                 $model->delete();
                 // display success message
-                $this->messageManager->addSuccess(__('You deleted the department.'));
+                $this->messageManager->addSuccess(__('You deleted the brewery.'));
                 // go to grid
                 return $resultRedirect->setPath('*/*/');
             } catch (\Exception $e) {
@@ -32,7 +32,7 @@ class Delete extends \Esgi\Job\Controller\Adminhtml\Department
             }
         }
         // display error message
-        $this->messageManager->addError(__('We can\'t find a department to delete.'));
+        $this->messageManager->addError(__('We can\'t find a brewery to delete.'));
         // go to grid
         return $resultRedirect->setPath('*/*/');
     }
