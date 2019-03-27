@@ -1,5 +1,5 @@
 <?php
-// app/code/Esgi/Beer/Controller/Brewery/Index.php
+// app/code/Esgi/Beer/Controller/Beer/Index.php
 namespace Esgi\Beer\Controller\Beer;
 
 use Magento\Framework\App\Action\Context;
