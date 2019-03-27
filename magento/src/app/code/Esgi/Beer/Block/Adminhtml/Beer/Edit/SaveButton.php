@@ -1,5 +1,5 @@
 <?php
-namespace Esgi\Beer\Block\Adminhtml\Brewery\Edit;
+namespace Esgi\Beer\Block\Adminhtml\Beer\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
@@ -15,7 +15,7 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
     public function getButtonData()
     {
         return [
-            'label' => __('Save Brewery'),
+            'label' => __('Save Beer'),
             'class' => 'save primary',
             'data_attribute' => [
                 'mage-init' => ['button' => ['event' => 'save']],

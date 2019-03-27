@@ -3,10 +3,10 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-namespace Esgi\Beer\Block\Adminhtml\Brewery\Edit;
+namespace Esgi\Beer\Block\Adminhtml\Beer\Edit;
 
 use Magento\Backend\Block\Widget\Context;
-use Esgi\Beer\Api\BreweryRepositoryInterface;
+use Esgi\Beer\Api\BeerRepositoryInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
@@ -20,17 +20,17 @@ class GenericButton
     protected $context;
 
     /**
-     * @var BreweryRepositoryInterface
+     * @var BeerRepositoryInterface
      */
     protected $breweryRepository;
 
     /**
      * @param Context $context
-     * @param BreweryRepositoryInterface $breweryRepository
+     * @param BeerRepositoryInterface $breweryRepository
      */
     public function __construct(
         Context $context,
-        BreweryRepositoryInterface $breweryRepository
+        BeerRepositoryInterface $breweryRepository
     ) {
         $this->context              = $context;
         $this->breweryRepository = $breweryRepository;
@@ -41,7 +41,7 @@ class GenericButton
      *
      * @return int|null
      */
-    public function getBreweryId()
+    public function getBeerId()
     {
         try {
             return $this->breweryRepository->getById(

@@ -3,7 +3,7 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-namespace Esgi\Beer\Block\Adminhtml\Brewery\Edit;
+namespace Esgi\Beer\Block\Adminhtml\Beer\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
@@ -18,9 +18,9 @@ class DeleteButton extends GenericButton implements ButtonProviderInterface
     public function getButtonData()
     {
         $data = [];
-        if ($this->getBreweryId()) {
+        if ($this->getBeerId()) {
             $data = [
-                'label' => __('Delete Brewery'),
+                'label' => __('Delete Beer'),
                 'class' => 'delete',
                 'on_click' => 'deleteConfirm(\'' . __(
                         'Are you sure you want to do this?'
@@ -36,6 +36,6 @@ class DeleteButton extends GenericButton implements ButtonProviderInterface
      */
     public function getDeleteUrl()
     {
-        return $this->getUrl('*/*/delete', ['id' => $this->getBreweryId()]);
+        return $this->getUrl('*/*/delete', ['id' => $this->getBeerId()]);
     }
 }
