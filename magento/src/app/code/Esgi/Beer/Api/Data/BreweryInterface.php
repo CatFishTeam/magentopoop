@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Esgi\Beer\Api\Data;
 
 /**
- * Esgi Brewery interface.
+ * Esgi brewery interface.
  * @api
  */
 interface BreweryInterface
