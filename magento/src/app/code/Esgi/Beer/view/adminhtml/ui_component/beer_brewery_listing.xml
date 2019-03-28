@@ -9,7 +9,7 @@
             <item name="deps" xsi:type="string">beer_brewery_listing.beer_brewery_listing_data_source</item>
         </item>
         <!-- define column type -->
-        <item name="spinner" xsi:type="string">beer_brewery_columns</item>
+        <item name="spinner" xsi:type="string">Beer_brewery_columns</item>
         <!-- Button to add new item -->
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
