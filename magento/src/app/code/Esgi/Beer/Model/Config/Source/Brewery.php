@@ -3,6 +3,7 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
+
 namespace Esgi\Beer\Model\Config\Source;
 
 use Magento\Framework\Option\ArrayInterface;
@@ -38,7 +39,8 @@ class Brewery implements ArrayInterface
      */
     public function __construct(
         CollectionFactory $breweryCollectionFactory
-    ) {
+    )
+    {
         $this->breweryCollectionFactory = $breweryCollectionFactory;
     }
 
@@ -54,7 +56,13 @@ class Brewery implements ArrayInterface
         if (!$this->options) {
             /** @var Collection $collection */
             $collection = $this->breweryCollectionFactory->create();
-            $this->options = $collection->toOptionArray();
+
+            $data = $collection->getData();
+
+            foreach ($data as $brewery) {
+                $this->options[] = ['value' => $brewery['entity_id'], 'label' => $brewery['title']];
+            }
+
         }
 
         $options = $this->options;
