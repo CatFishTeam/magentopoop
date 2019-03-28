@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
 namespace Esgi\Job\Model\Config\Source;
 
 use Magento\Framework\Option\ArrayInterface;

@@ -18,7 +18,7 @@ use Esgi\Beer\Model\ResourceModel\Brewery\CollectionFactory;
 class Brewery implements ArrayInterface
 {
     /**
-     * Countries
+     * Breweries
      *
      * @var CollectionFactory $breweryCollectionFactory
      */

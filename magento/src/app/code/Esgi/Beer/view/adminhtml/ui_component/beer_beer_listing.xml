@@ -9,7 +9,7 @@
             <item name="deps" xsi:type="string">beer_beer_listing.beer_beer_listing_data_source</item>
         </item>
         <!-- define column type -->
-        <item name="spinner" xsi:type="string">Beer_beer_columns</item>
+        <item name="spinner" xsi:type="string">beer_beer_columns</item>
         <!-- Button to add new item -->
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
@@ -41,6 +41,7 @@
             </argument>
         </argument>
     </dataSource>
+
     <listingToolbar name="listing_top">
         <settings>
             <sticky>true</sticky>
@@ -73,8 +74,8 @@
         </massaction>
         <paging name="listing_paging"/>
     </listingToolbar>
-    <columns name="Beer_beer_columns">
 
+    <columns name="Beer_beer_columns">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <!-- Bookmarks behaviour -->
