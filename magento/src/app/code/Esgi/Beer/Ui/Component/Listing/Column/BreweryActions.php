@@ -49,7 +49,7 @@ class BreweryActions extends Column
             foreach ($dataSource['data']['items'] as &$item) {
                 $item[$this->getData('name')]['edit']   = [
                     'href'   => $this->urlBuilder->getUrl(
-                        'Beer/brewery/edit',
+                        'beer/brewery/edit',
                         ['id' => $item['entity_id']]
                     ),
                     'label'  => __('Edit'),
