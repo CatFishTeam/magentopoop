@@ -39,6 +39,8 @@
     </virtualType>
 
     <!-- Beer -->
+    <preference for="Esgi\Beer\Api\Data\BeerSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults" />
     <preference for="Esgi\Beer\Api\Data\BeerInterface" type="Esgi\Beer\Model\Beer" />
     <preference for="Esgi\Beer\Api\BeerRepositoryInterface" type="Esgi\Beer\Model\BeerRepository" />
     <!-- Create our type BeerGridDataProvider -->
