@@ -1,12 +1,16 @@
 <?php
-/** @var $block Esgi\Beer\Block\Beer */
-$beers = $block->getBeers();
+/** @var $block Esgi\Beer\Block\View */
+$beer = $block->getBeer();
 ?>
-<ul id="beer-list">
-    <?php foreach ($beers as $beer) : ?>
-        <li><a href="/beer/beer/view?id=<?= $beer->getId(); ?>"><?php echo $beer->getTitle(); ?></a></li>
-    <?php endforeach; ?>
-</ul>
+
+<div>coucou</div>
+<?php
+
+echo '<pre style="font-size: 10px;"><code>';
+print_r($beer);
+echo '</code></pre>';
+
+?>
 <!--
 <field name="beer_id" formElement="select" sortOrder="10">
     <settings>
