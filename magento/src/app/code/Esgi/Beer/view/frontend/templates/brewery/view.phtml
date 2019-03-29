@@ -1,0 +1,8 @@
+<?php
+/** @var $block Esgi\Beer\Block\Brewery\View */
+$brewery = $block->getBrewery();
+?>
+<h2><?= $brewery->getTitle(); ?></h2>
+<p><?= $brewery->getContent(); ?></p>
+
+<div><a href="/beer/brewery">Retour à la liste des brasseries</a></div>

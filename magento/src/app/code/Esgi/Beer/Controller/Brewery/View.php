@@ -5,7 +5,7 @@ namespace Esgi\Beer\Controller\Brewery;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
-class Index extends \Magento\Framework\App\Action\Action
+class View extends \Magento\Framework\App\Action\Action
 {
     /**
      * @var PageFactory
@@ -33,7 +33,7 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         /** @var \Magento\Framework\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->set(__('Nos brasseries'));
+        $resultPage->getConfig()->getTitle()->set(__('La brasserie'));
         return $resultPage;
     }
 }

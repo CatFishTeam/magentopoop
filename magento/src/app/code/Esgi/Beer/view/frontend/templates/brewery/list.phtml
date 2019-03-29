@@ -4,22 +4,6 @@ $breweries = $block->getBreweries();
 ?>
 <ul id="brewery-list">
     <?php foreach ($breweries as $brewery) : ?>
-        <li><?php echo $brewery->getTitle(); ?></li>
+        <li><a href="/beer/brewery/view?id=<?= $brewery->getId(); ?>"><?php echo $brewery->getTitle(); ?></a></li>
     <?php endforeach; ?>
 </ul>
-<field name="brewery_id" formElement="select" sortOrder="10">
-    <settings>
-        <dataType>text</dataType>
-        <label translate="true">Brewery</label>
-        <validation>
-            <rule name="required-entry" xsi:type="boolean">true</rule>
-        </validation>
-    </settings>
-    <formElements>
-        <select>
-            <settings>
-                <options class="Esgi\Beer\Model\Config\Source\Brewery"/>
-            </settings>
-        </select>
-    </formElements>
-</field>
