@@ -1,7 +1,9 @@
 <?php
-/** @var $block Esgi\Beer\Block\View */
+/** @var $block Esgi\Beer\Block\Beer\View */
 $beer = $block->getBeer();
 ?>
 
 <h2><?= $beer->getTitle(); ?></h2>
 <p><?= $beer->getContent(); ?></p>
+
+<div><a href="/beer/beer">Retour à la liste des bières</a></div>
