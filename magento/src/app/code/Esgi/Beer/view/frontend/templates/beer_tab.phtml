@@ -5,4 +5,4 @@ $beer = $block->getBeer();
 <h2><?= $beer->getTitle(); ?></h2>
 <p><?= $beer->getContent(); ?></p>
 
-<a href="#">Page de la biere</a>
+<a href="/beer/beer/view?id=<?= $beer->getId(); ?>">Page de la biere</a>

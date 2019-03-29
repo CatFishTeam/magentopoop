@@ -1,5 +1,5 @@
 <?php
-namespace Esgi\Beer\Block;
+namespace Esgi\Beer\Block\Beer;
 
 use Esgi\Beer\Model\BeerRepository;
 use Magento\Framework\View\Element\Template;
