@@ -54,7 +54,7 @@
         <massaction name="listing_massaction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">beers_beer_listing.beers_beer_listing.beers_beer_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">beer_beer_listing.beer_beer_listing.Beer_beer_columns.ids</item>
                     <item name="indexField" xsi:type="string">entity_id</item>
                 </item>
             </argument>
