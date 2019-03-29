@@ -1,10 +1,11 @@
 <?php
 /** @var $block \Esgi\Beer\Block\Product\View */
 $beer = $block->getBeer();
-
+$brewery = $block->getBrewery();
 ?>
 
 <h2><?= $beer->getTitle(); ?></h2>
 <p><?= $beer->getContent(); ?></p>
 
-<a href="/beer/beer/view?id=<?= $beer->getId(); ?>">Page de la biere</a>
+<p><a href="/beer/beer/view?id=<?= $beer->getId(); ?>">Page de la biere</a></p>
+<p>Brasserie : <a href="/beer/brewery/view?id=<?= $brewery->getId() ?>"><?= $brewery->getTitle() ?></a></p>
